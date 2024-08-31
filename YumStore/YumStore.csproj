@@ -29,7 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Components\Pages\Product_Pages\ProductList.razor" />
+    <None Include="Components\Pages\Product_Pages\ProductUpsert.razor" />
     <None Include="wwwroot\js\notification.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Components\Layout\NavBar.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
   </ItemGroup>
 
 </Project>

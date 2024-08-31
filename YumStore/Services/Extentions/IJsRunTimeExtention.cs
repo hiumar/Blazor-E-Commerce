@@ -8,7 +8,7 @@ namespace YumStore.Services.Extentions
         {
             await js.InvokeVoidAsync("ShowToaster","success",message);
         }
-        public static async Task ToasterError(this IJSRuntime js, string message)
+        public static async Task ToastrError(this IJSRuntime js, string message)
         {
             await js.InvokeVoidAsync("ShowToaster", "error", message);
         }

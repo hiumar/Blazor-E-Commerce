@@ -1,4 +1,4 @@
-﻿debugger
+﻿
 window.ShowToaster = function (type, message) {
     debugger
     if (type == "success") {

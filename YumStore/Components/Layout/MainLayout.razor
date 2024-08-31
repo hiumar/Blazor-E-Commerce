@@ -1,14 +1,22 @@
-﻿@inherits LayoutComponentBase
+﻿@using YumStore.Utility
+@inherits LayoutComponentBase
+@inject AuthenticationStateProvider authenticationStateProvider
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+   
+    <AuthorizeView Roles="@SD.Role_Admin">
+        <div class="sidebar">
+            <NavMenu></NavMenu>
+        </div>
+    </AuthorizeView>
+    
+  
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+        @if (_naveBarVisible) {
+
+            <NavBar></NavBar>
+        }
 
         <article class="content px-4">
             @Body
@@ -21,3 +29,33 @@
     <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
+@code{
+    private bool _naveBarVisible;
+    protected override async Task OnInitializedAsync()
+    {
+        _naveBarVisible = await ShowNaveBar();
+        //return base.OnInitializedAsync();
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        _naveBarVisible = await ShowNaveBar();
+        // return base.OnAfterRenderAsync(firstRender);
+    }
+
+    private async Task<bool> ShowNaveBar()
+    {
+        var authState = await authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        var authnticated = user.Identity is not null && user.Identity.IsAuthenticated;
+
+        if (!authnticated)
+        {
+            return true;
+        }
+        if (authnticated)
+        {
+            return true;
+        }
+        return false;
+    }
+}

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YumStore", "YumStore\YumStore.csproj", "{DDD9A00B-17A7-4074-8955-9310806DE243}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp_WAS_Indentity", "BlazorApp_WAS_Indentity\BlazorApp_WAS_Indentity\BlazorApp_WAS_Indentity.csproj", "{AF95DA19-FE2F-494B-9A77-1523CFA94BE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp_WAS_Indentity.Client", "BlazorApp_WAS_Indentity\BlazorApp_WAS_Indentity.Client\BlazorApp_WAS_Indentity.Client.csproj", "{1484F42E-EF83-4FEB-9149-E29BF860E2F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DDD9A00B-17A7-4074-8955-9310806DE243}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDD9A00B-17A7-4074-8955-9310806DE243}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDD9A00B-17A7-4074-8955-9310806DE243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF95DA19-FE2F-494B-9A77-1523CFA94BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF95DA19-FE2F-494B-9A77-1523CFA94BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF95DA19-FE2F-494B-9A77-1523CFA94BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF95DA19-FE2F-494B-9A77-1523CFA94BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1484F42E-EF83-4FEB-9149-E29BF860E2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1484F42E-EF83-4FEB-9149-E29BF860E2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1484F42E-EF83-4FEB-9149-E29BF860E2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1484F42E-EF83-4FEB-9149-E29BF860E2F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
